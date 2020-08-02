@@ -9,7 +9,7 @@
 获取京东Cookie = type=http-request,pattern=https:\/\/api\.m\.jd\.com\/client\.action.*functionId=signBean,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js
 
 爱奇艺签到 = type=cron,cronexp=0 8 * * *,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/iQIYI-DailyBonus/iQIYI.js
-爱奇艺获取Cookie = type=http-request,pattern=https?:\/\/.*\.iqiyi\.com\/.*authcookie=,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/iQIYI-DailyBonus/iQIYI.js
+#爱奇艺获取Cookie = type=http-request,pattern=https?:\/\/.*\.iqiyi\.com\/.*authcookie=,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/iQIYI-DailyBonus/iQIYI.js
 
 #http-request ^https:\/\/api\.rr\.tv\/user\/profile script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/rrtv/rrtv.cookie.js
 cron "10 0 0 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/rrtv/rrtv.js
@@ -25,4 +25,4 @@ cron "10 0 0 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scr
 天气推送 = type=cron,cronexp=4 8-20/4 * * *,wake-system=1,timeout=20,script-path=https://raw.githubusercontent.com/skywlakerliu/js/master/weather_pro.js
 
 [MITM]
-hostname = %APPEND% api.m.jd.com, *.iqiyi.com, *.rr.tv, zt.wps.cn
+hostname = %APPEND% api.m.jd.com, *.rr.tv, zt.wps.cn
